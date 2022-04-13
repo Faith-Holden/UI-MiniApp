@@ -1,0 +1,13 @@
+<div class = 'header'>
+  <div class = 'header-flex'>
+    <span class = header-link>
+      <%= link_to "Index", root_path%>
+    </span>
+    <span class = header-link>
+      <%= link_to "New Account", new_user_account_path %>
+    </span>
+  </div>
+  <div class = "header-title">
+    <%= yield :header_title%>
+  </div>
+</div>

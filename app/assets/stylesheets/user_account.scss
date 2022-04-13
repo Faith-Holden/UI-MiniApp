@@ -1,0 +1,206 @@
+// @import "bootstrap-sprockets";
+// @import "bootstrap";
+
+$card-color : #F2F5DF;
+$background-color : #FFFBE6;
+$text-color-main : #1F5E4F;
+$text-color-emphasis : #FD5523;
+$header-bottom-margin : 80px;
+
+
+// @mixin  box_sizing {
+//   -moz-box-sizing: border-box;
+//   -webkit-box-sizing: border-box;
+//   box-sizing: border-box;
+// }
+
+body{
+  background-color: $background-color;
+  color: $text-color-main;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header{
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  height: $header-bottom-margin;
+  left: 0;
+  right: 0;
+  border-bottom: 2px solid $card-color;
+  .header-flex{
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 4;
+
+
+    .header-link{
+      height: $header-bottom-margin;
+      box-sizing: border-box;
+      padding-right: 20px;
+      text-align: center;
+      a{
+        display: block;
+  
+        // position: absolute;
+        box-sizing: border-box;
+        padding-top: 50px;
+        padding-right: 10px;
+        padding-left: 10px;
+
+        top: 0px;
+        height: 100%;
+        color : $text-color-main !important;
+        text-decoration: none;
+        &:hover{
+          border-bottom: 2px solid $text-color-main;
+        }
+      }
+    }
+
+  }
+  .header-title{
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: $text-color-emphasis;
+    font-size: xx-large;
+    font-weight: bold;
+    // padding-left: 10px;
+    padding-top: 20px;
+    z-index: 0;
+  }
+}
+
+.form-custom{
+  position: absolute;
+  background-color: $card-color;
+  top: $header-bottom-margin;
+  left: 30%;
+  right: 30%;
+
+  // border-radius: 10px;
+  padding-top: 50px;
+  margin: 20px;
+
+  .form-instructions{
+    overflow: wrap;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    #instruction-text{
+      width: 65%;
+    }
+  }
+
+  .form-div{
+    margin: 40px;
+    position: inherit;
+    // padding-left: 5px;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    input{
+      text-align: center;
+      width: 65%;
+    }
+    .btn-primary{
+      width: 30%;
+    }
+  }
+}
+
+
+.account-index{
+  box-sizing: border-box;
+  position: absolute;
+  top: $header-bottom-margin;
+  left: 0;
+  right: 0;
+
+  // align-content: center;
+  // padding: 10px;
+  .account{
+    height: 40px;
+    padding: 20px;
+    margin: 30px;
+    background-color: $card-color;
+    // justify-content: left;
+
+    .account-info{
+      position: absolute;
+      left: 0;
+      width: 80%;
+      #first-name{
+        left: 5%;
+        width: 20%;
+      }
+      #last-name{
+        left: 30%;
+        width: 30%;
+      }
+      #email{
+        left: 60%;
+        width: 30%;
+      }
+    }
+
+
+    span{
+      position: absolute;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    #delete-link{
+      position: absolute;
+      right: 40px;
+      padding-top: 10px;
+      a{
+        color: $text-color-emphasis
+      }
+    }
+
+  }
+}
+
+#error-explanation{
+  position: fixed;
+  font-size: small;
+  font-weight: bold;
+  right: 10px;
+  color: $text-color-emphasis;
+  background-color: $card-color;
+  border: 1px solid $text-color-emphasis;
+  padding: 20px;
+  border-radius: 2px;
+
+
+}
+
+.field_with_errors{
+  width: 100%;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+
+
+  input{
+    box-sizing: border-box;
+    text-align: center;
+    width: 65%;
+    border-color: $text-color-emphasis;
+    border-width: 1px;
+    border-radius: 2px;
+  }
+}
+

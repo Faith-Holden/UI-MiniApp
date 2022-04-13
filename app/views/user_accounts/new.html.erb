@@ -1,0 +1,42 @@
+<% content_for :header_title do %>
+  Create Account
+<% end %>
+
+<div class = 'form-custom'>
+  <div class = 'form-instructions'>
+    <span id = 'instruction-text'>
+      To create your new account, please fill in the following information and then click "submit".
+    </span>
+  </div>
+  <%= form_with(model: @account, local: true) do |f|%>
+    <%= render 'layouts/error_messages', object: f.object %>
+    <div class = 'form-div'>
+      <%= f.text_field :first_name, placeholder: "First Name..."%>
+    </div>
+
+    <div class = 'form-div'>
+      <%= f.text_field :last_name, placeholder: "Last Name..."%>
+    </div>
+
+    <div class = 'form-div'>
+      <%= f.text_field :email, placeholder: "Email..."%>
+    </div>
+
+    <div class = 'form-div'>
+      <%= f.password_field :password, placeholder: "Password..."%>
+    </div>
+
+    <div class = 'form-div'>
+      <%= f.password_field :password_confirmation, placeholder: "Retype Password..."%>
+    </div>
+
+    <div class = 'form-div'>
+      <%= f.text_field :password_hint, placeholder: "Password Hint..."%>
+    </div>
+
+
+    <div class = 'form-div'>
+      <%= f.submit "Submit", class: "btn btn-primary"%>
+    </div>
+  <% end%>
+</div>
