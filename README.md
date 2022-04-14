@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+UI MiniApp is a miniature app I created to showcase creation of a user signup UI. 
+The 'new' view showcases a user input form, and the 'index' view shows existing/newly created users.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A few things of note are:
+* The form handles input errors originating in failed model validations (e.g. the email is invalid)
+* After validation of data, user input is stored in a sqlite database, and can be viewed at the "index" tab.
+* UI theme is based on a simplified version of material.io's material study "Basil" 
