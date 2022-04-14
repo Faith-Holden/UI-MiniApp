@@ -10,4 +10,4 @@ A few things of note are:
 
 **I also deployed UI MiniApp as a heroku web app, and it can be viewed by clicking this link.**
 
-https://fast-meadow-11271.herokuapp.com/
+https://fast-meadow-11271.herokuapp.com/user_accounts/new
