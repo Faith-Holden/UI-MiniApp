@@ -1,23 +1,30 @@
 <% content_for :header_title do %>
   Index
 <% end %>
-<div class = 'account-index'>
-  <% @accounts.each do |account| %>
-    <div class = 'account'>
-      <div class=  'account-info'>
-        <span id = "first-name">
-          First Name: <%= account.first_name%>
-        </span>
-        <span id = "last-name">
-          Last Name: <%= account.last_name%>
-        </span>
-        <span id = "email">
-          Email Address: <%= account.email%>
+
+<% if @accounts.length < 1%>
+  <%= button_to "Create New Account", new_user_account_path, method: :get%>
+<% else %>
+
+  <div class = 'account-index'>
+    <% @accounts.each do |account| %>
+      <div class = 'account'>
+        <div class=  'account-info'>
+          <span id = "first-name">
+            First Name: <%= account.first_name%>
+          </span>
+          <span id = "last-name">
+            Last Name: <%= account.last_name%>
+          </span>
+          <span id = "email">
+            Email Address: <%= account.email%>
+          </span>
+        </div>
+        <span id = "delete-link">
+          <%= link_to "Delete Account", user_account_path(account), method: :delete, data: { confirm: "Are you sure?" }%>
         </span>
       </div>
-      <span id = "delete-link">
-        <%= link_to "Delete Account", user_account_path(account), method: :delete, data: { confirm: "Are you sure?" }%>
-      </span>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
+
+<% end %>

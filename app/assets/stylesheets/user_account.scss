@@ -204,3 +204,22 @@ body{
   }
 }
 
+.button_to{
+  input{
+    position: absolute;
+    left: 40%;
+    top: 300px;
+    background-color: #21473e;
+    color: $text-color-emphasis;
+    font-size: larger;
+    font-weight: bold;
+    width: 20%;
+    height: 8%;
+    border-radius: 4px;
+    &:hover{
+      background-color: #1F5E4F;
+    }
+  }
+
+}
+
